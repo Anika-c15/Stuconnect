@@ -59,10 +59,13 @@ const ServerChannels = () => {
           <CommandGroup heading="Text Channels">
             {textChannels.map((channel) => (
               <CommandItem
-                key={channel._id}
-                onSelect={() => { handleTextChannelClick(channel._id) }}
-                className={cn(params.channelId === channel._id ? `dark:bg-[#1E1F22]` : ``, `hover:bg-zinc-300`)}
-              >
+              key={channel._id}
+              onSelect={() => { handleTextChannelClick(channel._id) }}
+              className={cn(
+                params.channelId === channel._id ? 'dark:bg-[#1E1F22]' : '',
+                'hover:bg-zinc-700/50 dark:hover:bg-zinc-700/50 text-zinc-400 hover:text-zinc-100 transition-colors'
+              )}
+            >
                 <Hash className="mr-2 h-4 w-4"/>
                 <span>{channel.name}</span>
                 {currentUserRole === 'ADMIN'&& channel.name !== 'general' && params.id && (
@@ -77,10 +80,13 @@ const ServerChannels = () => {
               <CommandGroup heading="Voice Channels">
                 {audioChannels.map((channel) => (
                   <CommandItem
-                    key={channel._id}
-                    onSelect={() => { handleAudioChannelClick(channel.name, profile.username) }}
-                    className={cn(params.channelId === channel._id ? `bg-[#1E1F22]` : ``, `hover:bg-zinc-700`)}
-                  >
+                  key={channel._id}
+                  onSelect={() => { handleAudioChannelClick(channel.name, profile.username) }}
+                  className={cn(
+                    params.channelId === channel._id ? 'dark:bg-[#1E1F22]' : '',
+                    'hover:bg-indigo-900/30 dark:hover:bg-indigo-900/30 text-indigo-400 hover:text-indigo-100 transition-colors'
+                  )}
+                >
                     <Mic className="mr-2 h-4 w-4" />
                     <span>{channel.name}</span>
                     {currentUserRole === 'ADMIN' && params.id && (
@@ -96,11 +102,14 @@ const ServerChannels = () => {
               <CommandSeparator />
               <CommandGroup heading="Video Channels">
                 {videoChannels.map((channel) => (
-                  <CommandItem
-                    key={channel._id}
-                    onSelect={() => { handleVideoChannelClick(channel.name, profile.username) }}
-                    className={cn(params.channelId === channel._id ? `bg-[#1E1F22]` : ``, `hover:bg-zinc-700`)}
-                  >
+                 <CommandItem
+                 key={channel._id}
+                 onSelect={() => { handleVideoChannelClick(channel.name, profile.username) }}
+                 className={cn(
+                   params.channelId === channel._id ? 'dark:bg-[#1E1F22]' : '',
+                   'hover:bg-indigo-900/30 dark:hover:bg-indigo-900/30 text-indigo-400 hover:text-indigo-100 transition-colors'
+                 )}
+               >
                     <Video className="mr-2 h-4 w-4" />
                     <span>{channel.name}</span>
                     {currentUserRole === 'ADMIN' && params.id && (

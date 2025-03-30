@@ -58,9 +58,9 @@ const DeleteChannelModal = ({ channelId, serverId, channelName }: DeleteChannelM
                 </DialogHeader>
                 <DialogFooter className="bg-gray-100 dark:bg-gray-900 px-6 mt-6 py-4">
                     <div className="flex items-center justify-end w-full">
-                        <Button variant="primary" onClick={handleDeleteChannel}>
-                            Confirm
-                        </Button>
+                    <Button variant="destructive" onClick={handleDeleteChannel}>
+  Confirm
+</Button>
                     </div>
                 </DialogFooter>
             </DialogContent>

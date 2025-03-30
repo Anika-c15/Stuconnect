@@ -57,8 +57,10 @@ const CreateChannelModal = () => {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger>
-                <div className="w-56 rounded-md bg-zinc-200 hover:bg-zinc-300 transition h-10 dark:bg-[#1E1F22] flex items-center justify-center">Create Channel</div>
-            </DialogTrigger>
+  <Button variant="customOutline" className="w-56 h-10">
+    Create Channel
+  </Button>
+</DialogTrigger>
             <DialogContent className="bg-white dark:bg-black text-black dark:text-white p-0 overflow-hidden">
                 <DialogTitle className="text-2xl mt-6 text-center font-bold">
                     Create a Channel
@@ -100,9 +102,9 @@ const CreateChannelModal = () => {
                         </div>
                     </div>
                     <DialogFooter className="bg-gray-100 dark:bg-black px-6 py-4">
-                        <Button type="submit" variant="primary">
-                            Create
-                        </Button>
+                       <Button type="submit" variant="primary" className="w-full">
+  Create
+</Button>
                     </DialogFooter>
                 </form>
             </DialogContent>

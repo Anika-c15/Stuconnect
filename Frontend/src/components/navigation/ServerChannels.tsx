@@ -84,7 +84,7 @@ const ServerChannels = () => {
                   onSelect={() => { handleAudioChannelClick(channel.name, profile.username) }}
                   className={cn(
                     params.channelId === channel._id ? 'dark:bg-[#1E1F22]' : '',
-                    'hover:bg-indigo-900/30 dark:hover:bg-indigo-900/30 text-indigo-400 hover:text-indigo-100 transition-colors'
+                    'hover:bg-zinc-700/50 dark:hover:bg-zinc-700/50 text-zinc-400 hover:text-zinc-100 transition-colors'
                   )}
                 >
                     <Mic className="mr-2 h-4 w-4" />
@@ -107,7 +107,7 @@ const ServerChannels = () => {
                  onSelect={() => { handleVideoChannelClick(channel.name, profile.username) }}
                  className={cn(
                    params.channelId === channel._id ? 'dark:bg-[#1E1F22]' : '',
-                   'hover:bg-indigo-900/30 dark:hover:bg-indigo-900/30 text-indigo-400 hover:text-indigo-100 transition-colors'
+                   'hover:bg-zinc-700/50 dark:hover:bg-zinc-700/50 text-zinc-400 hover:text-zinc-100 transition-colors'
                  )}
                >
                     <Video className="mr-2 h-4 w-4" />
